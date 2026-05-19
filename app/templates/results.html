@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results - CodeGuard AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container flex-between align-center">
+            <div class="logo">
+                <span class="icon">🛡️</span> CodeGuard <span class="accent">AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="/">New Analysis</a>
+                <a href="/results_page" class="active">Results</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-10 slide-up">
+        <header class="flex-between align-center mb-8">
+            <h1 class="text-3xl font-bold">Analysis Results</h1>
+            <div class="score-badge" id="security-score">
+                Score: <span id="score-value">--</span>/100
+            </div>
+        </header>
+
+        <div id="loading-results" class="text-center py-12">
+            <div class="spinner large-spinner mx-auto mb-4"></div>
+            <p class="text-muted text-lg">Fetching analysis results...</p>
+        </div>
+
+        <div id="error-message" class="alert alert-danger hidden mb-6"></div>
+
+        <div id="results-content" class="hidden">
+            <div class="grid grid-cols-1 md-grid-cols-3 gap-6 mb-8">
+                <!-- Severity Cards -->
+                <div class="card stat-card danger">
+                    <h3 class="text-lg font-semibold mb-2">High Severity</h3>
+                    <p class="text-3xl font-bold" id="high-count">0</p>
+                </div>
+                <div class="card stat-card warning">
+                    <h3 class="text-lg font-semibold mb-2">Medium Severity</h3>
+                    <p class="text-3xl font-bold" id="medium-count">0</p>
+                </div>
+                <div class="card stat-card success">
+                    <h3 class="text-lg font-semibold mb-2">Low Severity</h3>
+                    <p class="text-3xl font-bold" id="low-count">0</p>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-bold mb-4">Identified Issues</h2>
+            <div class="issues-list" id="issues-container">
+                <!-- Issues injected via JS -->
+            </div>
+            
+            <div id="no-issues" class="hidden text-center py-12 card glass-panel">
+                <div class="text-4xl mb-4">🎉</div>
+                <h3 class="text-xl font-semibold mb-2">No Issues Found!</h3>
+                <p class="text-muted">Your codebase looks clean and secure.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center mt-12 mb-6 text-muted text-sm fade-in">
+        <p>&copy; 2026 CodeGuard AI. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof loadResults === 'function') {
+                loadResults();
+            }
+        });
+    </script>
+</body>
+</html>

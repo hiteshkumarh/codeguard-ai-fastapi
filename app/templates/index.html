@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeGuard AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container flex-between align-center">
+            <div class="logo">
+                <span class="icon">🛡️</span> CodeGuard <span class="accent">AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="active">Analyze</a>
+                <a href="/results_page">Past Results</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-10">
+        <section class="hero text-center fade-in">
+            <h1 class="text-4xl font-bold mb-4">Secure Your Codebase</h1>
+            <p class="text-muted text-lg mb-8">Instant static and AI-assisted code analysis to identify vulnerabilities, bugs, and code smells.</p>
+        </section>
+
+        <section class="analysis-container slide-up">
+            <div class="panel glass-panel">
+                <form id="analyze-form">
+                    <div class="form-group mb-6">
+                        <label for="code-input" class="form-label font-semibold">Paste your code here</label>
+                        <textarea id="code-input" class="form-control code-editor" placeholder="def hello_world():&#10;    # Write or paste your code here&#10;    pass" required></textarea>
+                    </div>
+                    
+                    <div class="flex-between align-center mb-6 upload-section">
+                        <div class="file-upload-wrapper">
+                            <label for="file-upload" class="btn btn-outline btn-sm">
+                                📎 Upload File
+                            </label>
+                            <input type="file" id="file-upload" class="hidden" accept=".py,.js,.ts,.html,.css,.json,.java,.cpp,.c">
+                            <span id="file-name" class="text-muted ml-3 text-sm">No file chosen</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-full btn-lg relative" id="analyze-btn">
+                        <span id="btn-text">Analyze Code</span>
+                        <div class="spinner hidden" id="loading-spinner"></div>
+                    </button>
+                </form>
+            </div>
+        </section>
+        
+        <div id="error-message" class="alert alert-danger hidden mt-6"></div>
+    </main>
+
+    <footer class="text-center mt-12 mb-6 text-muted text-sm fade-in">
+        <p>&copy; 2026 CodeGuard AI. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

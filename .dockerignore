@@ -1,0 +1,29 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Environment variables
+.env
+.env.*
+
+# Local Database (Uncomment to exclude local db overriding container state)
+# codeguard.db
+
+# Logs and test output
+output.txt
+output_ai.txt
+*.log

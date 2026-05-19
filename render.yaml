@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: codeguard-ai
+    env: docker
+    plan: free
