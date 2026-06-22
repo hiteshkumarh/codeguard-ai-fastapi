@@ -9,7 +9,7 @@
 5. [Project Structure](#project-structure)
 6. [Getting Started](#getting-started)
 7. [Deployment](#deployment)
-8. [API Endpoints](#api-endpoints)
+8. [API Endpoints](#api-endpoints) 
 9. [Environment Variables](#environment-variables)
 
 ---
