@@ -2,7 +2,7 @@
 module.exports = [
   {
     languageOptions: {
-      ecmaVersion: 2022,
+      ecmaVersion: 2022, 
       sourceType: "module",
       globals: {
         console: "readonly",
