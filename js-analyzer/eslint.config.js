@@ -7,7 +7,7 @@ module.exports = [
       globals: {
         console: "readonly",
         eval: "readonly"
-      }
+      } 
     },
     rules: {
       "no-eval": "error",
