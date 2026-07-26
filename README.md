@@ -13,7 +13,7 @@
 9. [Environment Variables](#environment-variables)
 
 ---
-
+ 
 ## About the Project
 CodeGuard AI is a full-stack, AI-powered static code analysis tool. It helps developers instantly identify bugs, security vulnerabilities, and code quality issues running entirely locally or optionally via cloud LLMs.
 
