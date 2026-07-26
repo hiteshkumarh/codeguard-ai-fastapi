@@ -100,8 +100,7 @@ The repository includes a `render.yaml` file for instant deployment.
 Alternatively, deploy it as a Docker service. The `Dockerfile` uses an optimized `gunicorn` production server.
 
 ## API Endpoints
-* `POST /login`: Authenticate and receive a JWT.
-* `POST /signup`: Register a new user account.
+
 * `POST /analyze`: Submit code snippets for static and AI-assisted analysis.
 * `GET /results`: Fetch historical analytics results.
 * `GET /`: Serves the web UI.
