@@ -20,4 +20,3 @@ services:
     rootDir: frontend
     buildCommand: 'echo "window.ENV = { API_URL: ''https://codeguard-ai-backend.onrender.com/api/v1'' };" > env.js'
     staticPublishPath: .
-    plan: free
