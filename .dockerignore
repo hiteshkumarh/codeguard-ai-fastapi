@@ -19,9 +19,18 @@ env/
 # Environment variables
 .env
 .env.*
+backend/.env
 
-# Local Database (Uncomment to exclude local db overriding container state)
-# codeguard.db
+# Node.js
+node_modules/
+
+# Local Database
+*.db
+test.db
+codeguard.db
+
+# Tests
+.pytest_cache/
 
 # Logs and test output
 output.txt

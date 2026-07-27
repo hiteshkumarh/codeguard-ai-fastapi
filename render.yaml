@@ -1,5 +1,23 @@
 services:
   - type: web
-    name: codeguard-ai
+    name: codeguard-ai-backend
     env: docker
+    dockerfilePath: backend/Dockerfile
+    rootDir: .
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: FRONTEND_CORS_ORIGINS
+        value: https://codeguard-ai-frontend.onrender.com
+      - key: GROQ_API_KEY
+        sync: false
+    plan: free
+
+  - type: web
+    name: codeguard-ai-frontend
+    env: static
+    rootDir: frontend
+    buildCommand: 'echo "window.ENV = { API_URL: ''https://codeguard-ai-backend.onrender.com/api/v1'' };" > env.js'
+    publishPath: .
     plan: free
